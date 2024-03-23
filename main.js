@@ -29,15 +29,30 @@ function solicitar(){
     if(eleccion === 1){
         const total = calculoDevolucion(arrayPrestamos[0].monto);
         const montoCuotas = calculoCuotas (arrayPrestamos[0].cuotas, total);
-        alert(`Ha solicitado el ${arrayPrestamos[0].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos` )
+        let confirmacion1 = confirm(`Ha solicitado el ${arrayPrestamos[0].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos, confirma la operación?`)
+        if (confirmacion1 == true){
+            alert("El prestamo ha sido otorgado exitosamente");
+        } else {
+            alert("El prestamo ha sido cancelado, esperamos que vuelva pronto!");
+        }
     }else if(eleccion === 2){
         total = calculoDevolucion(arrayPrestamos[1].monto);
         montoCuotas = calculoCuotas (arrayPrestamos[1].cuotas, total);
-        alert(`Ha solicitado el ${arrayPrestamos[1].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos` )
+        let confirmacion2 = confirm(`Ha solicitado el ${arrayPrestamos[1].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos, confirma la operación?`);
+        if (confirmacion2 == true){
+            alert("El prestamo ha sido otorgado exitosamente");
+        } else {
+            alert("El prestamo ha sido cancelado, esperamos que vuelva pronto!");
+        }
     }else if(eleccion === 3){
         total = calculoDevolucion(arrayPrestamos[2].monto);
         montoCuotas = calculoCuotas (arrayPrestamos[2].cuotas, total);
-        alert(`Ha solicitado el ${arrayPrestamos[2].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos` )
+        let confirmacion3 = confirm(`Ha solicitado el ${arrayPrestamos[2].titulo}, el monto a devolver es de ${total} pesos, en 12 cuotas de ${montoCuotas} pesos, confirma la operación?` );
+        if (confirmacion3 == true){
+            alert("El prestamo ha sido otorgado exitosamente");
+        } else {
+            alert("El prestamo ha sido cancelado, esperamos que vuelva pronto!");
+        }
     } else if(eleccion === 4){
         let prestamoManual = parseInt(prompt("Ingrese el monto del prestamo que desea solicitar"));
       while(prestamoManual<100000 || prestamoManual>2000000){
@@ -53,7 +68,12 @@ function solicitar(){
         }
         total = calculoDevolucion(prestamoManual);
         montoCuotas = calculoCuotas(cantidadCuotas, total);
-        alert(`Ha solicitado un prestamo de ${prestamoManual} pesos, el monto a devolver es de ${total} pesos, en ${cantidadCuotas} cuotas de ${montoCuotas} pesos` )
+        let confirmacion = confirm(`Ha solicitado un prestamo de ${prestamoManual} pesos, el monto a devolver es de ${total} pesos, en ${cantidadCuotas} cuotas de ${montoCuotas} pesos, confirma la operación?` );
+        if (confirmacion == true){
+            alert("El prestamo ha sido otorgado exitosamente");
+        } else {
+            alert("El prestamo ha sido cancelado, vuelva pronto!");
+        }
     }
 }
 
@@ -68,7 +88,7 @@ function calculoCuotas(cuotas, monto){
 }
 
 function despedida (){
-    alert("Gracias por utilizar nuestro servicio, " + nombre + ", esperamos que nos sigas teniendo en cuenta!")
+    alert("Gracias por utilizar nuestro servicio, " + nombre + ", esperamos que nos sigas teniendo en cuenta!");
 }
 
 despedida();
