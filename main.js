@@ -20,7 +20,7 @@ const arrayPrestamos = [prestamo3, prestamo1, prestamo2];
 
 arrayPrestamos.sort((a, b) => a.monto - b.monto);
 
-alert(`${arrayPrestamos[0].titulo} : ${arrayPrestamos[0].monto} a devolver en ${arrayPrestamos[0].cuotas} cuotas\n${arrayPrestamos[1].titulo} : ${arrayPrestamos[1].monto} a devolver en ${arrayPrestamos[1].cuotas} cuotas\n${arrayPrestamos[2].titulo} : ${arrayPrestamos[2].monto} a devolver en ${arrayPrestamos[2].cuotas} cuotas`);
+alert(`${arrayPrestamos[0].titulo} : $${arrayPrestamos[0].monto} a devolver en ${arrayPrestamos[0].cuotas} cuotas\n${arrayPrestamos[1].titulo} : $${arrayPrestamos[1].monto} a devolver en ${arrayPrestamos[1].cuotas} cuotas\n${arrayPrestamos[2].titulo} : $${arrayPrestamos[2].monto} a devolver en ${arrayPrestamos[2].cuotas} cuotas`);
 
 function solicitar(){
     let eleccion = parseInt(prompt(`Pulse 1 si desea solicitar el ${arrayPrestamos[0].titulo}\nPulse 2 si desea solicitar el ${arrayPrestamos[1].titulo}\nPulse 3 si desea solicitar el ${arrayPrestamos[2].titulo}\nPulse 4 si desea solicitar otro monto.` ));
